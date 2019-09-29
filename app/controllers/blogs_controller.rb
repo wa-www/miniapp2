@@ -9,6 +9,10 @@ class BlogsController < ApplicationController
     @blog=Blog.new
   end
 
+  def show
+    @blog=Blog.find(params[:id])
+  end
+
   def create
     # binding.pry
     Blog.create(title: test_params[:title], text: test_params[:text], user_id: current_user.id)

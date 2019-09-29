@@ -16,10 +16,9 @@
  $secondary-color: color("grey", "lighten-3") !default;
 
  @import './sass/materialize';
-
  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
-
+ @import './custom'
 /*
  *= require_tree .
  *= require material_icons
