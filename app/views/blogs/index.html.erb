@@ -5,9 +5,11 @@
       <div class="card red lighten-4">
         <div class="card-content white-text">
           <span class="card-title"><%=blog.title%></span>
-          <p><%=blog.text%></p>
+          <p class="title"><%=blog.text%></p>
+          <p class="name">投稿者：<%=blog.user.name%></p>
         </div>
         <div class="card-action">
+            <%=link_to "詳細",blog_path(blog.id)%>
           <%if user_signed_in? && current_user.id==blog.user.id%>
             <%=link_to "編集",edit_blog_path(blog.id)%>
             <%=link_to "削除",blog_path(blog.id), method: :delete%>
@@ -17,4 +19,16 @@
     </div>
   </div>
   <%end%>
+
+      <%= paginate(@blogs)%>
+
+  <%# # <ul class="pagination">
+  #   <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+  #   <li class="active"><a href="#!">1</a></li>
+  #   <li class="waves-effect"><a href="#!">2</a></li>
+  #   <li class="waves-effect"><a href="#!">3</a></li>
+  #   <li class="waves-effect"><a href="#!">4</a></li>
+  #   <li class="waves-effect"><a href="#!">5</a></li>
+  #   <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+  # </ul> %>
 

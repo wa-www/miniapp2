@@ -17,6 +17,7 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
       <%if user_signed_in?%>
         <li><%=link_to "投稿",new_blog_path, method: :get%></li>
+        <li><%=link_to "マイページ",user_path(current_user.id)%></li>
         <li><%=link_to "ログアウト",destroy_user_session_path ,method: :delete%></li>
       <%else%>
         <li><%=link_to "ログイン",new_user_session_path%></li>
@@ -28,20 +29,6 @@
   </nav>
         
     <%= yield %>
-
-    <%= paginate(@blogs)%>
-
-  <%# # <ul class="pagination">
-  #   <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-  #   <li class="active"><a href="#!">1</a></li>
-  #   <li class="waves-effect"><a href="#!">2</a></li>
-  #   <li class="waves-effect"><a href="#!">3</a></li>
-  #   <li class="waves-effect"><a href="#!">4</a></li>
-  #   <li class="waves-effect"><a href="#!">5</a></li>
-  #   <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-  # </ul> %>
-  
-
 
   </body>
 </html>
