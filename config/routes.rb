@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  get 'blogs' => 'blogs#index'
+  devise_for :users
+  get '/' => 'blogs#index'
+  resources :blogs 
+
 end
