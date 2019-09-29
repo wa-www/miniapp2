@@ -66,3 +66,7 @@ gem 'sprockets', '3.7.2'
 
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
+
+gem 'pry-rails'
+gem 'kaminari'
+gem 'devise'

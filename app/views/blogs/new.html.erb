@@ -1,0 +1,18 @@
+  <div class="row">
+    <%=form_for @blog do |f| %>
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          タイトル
+          <%=f.text_field :title, html: { class: 'materialize-textarea'}, placeholder: 'title'%>
+          内容
+          <%=f.text_area :text, html: {class: 'materialize-textarea'}, placeholder: 'content'%>
+          <%= f.submit "SENT", html: {class: 'waves-effect waves-light btn'} %>
+          <%# <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Textarea</label> %>
+        </div>
+      </div>
+    </form>
+    <%end%>
+  </div> 
+ 
