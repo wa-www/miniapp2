@@ -10,6 +10,7 @@ class BlogsController < ApplicationController
   end
 
   def show
+    # binding.pry
     @blog=Blog.find(params[:id])
   end
 

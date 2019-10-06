@@ -16,3 +16,41 @@
       </div>
     </div>
   </div>
+
+  <div class="container"> 
+    <!-- ここからフォーム カードで実装-->
+    <% if current_user %>
+      <%= form_tag("/blogs/#{@blog.id}/comments", method: :post) do %>
+        <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
+        <input type="submit" value="SENT">
+      <% end %>
+    <% end %>
+  </div>
+
+
+    <ul class="collection">
+    <div class="col s12 m6">
+      <div class="card red lighten-4">
+        <div class="card-content gray-text">
+
+
+          <li class="collection-item avatar">
+            <i class="material-icons circle green">insert_chart</i>
+            <span class="title">Title</span>
+            <p>First Line <br>
+              Second Line
+            </p>
+            <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle red">play_arrow</i>
+            <span class="title">Title</span>
+            <p>First Line <br>
+              Second Line
+            </p>
+            <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+          </li>
+          </div>
+          </div>
+          </div>
+  </ul>
