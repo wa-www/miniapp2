@@ -2,6 +2,7 @@ class BlogsController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
+    @user=User.find_by(id: current_user.id)
     @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
   end
 
